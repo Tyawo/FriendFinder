@@ -216,7 +216,22 @@
             event.preventDefault();
             alert("hi");
 
-          
+            var newFriend = {
+                name: $("#name").val().trim(),
+                photo: $("#photo").val().trim(),
+
+                
+                //STILL WORKING ON THIS
+                //  score: $("#age").val().trim() 
+                
+            };
+            // $.ajax 
+            // Question: What does this code do??
+            $.post("/api/friends", newFriend)
+                .then(function (data) {
+                    console.log("add.html", data);
+                    alert("Adding friend...");
+                });
         });
 
 

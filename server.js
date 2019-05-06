@@ -12,13 +12,13 @@ var PORT = process.env.PORT || 3000;
 // app.use(express.urlencoded({ extended: true }));
 // app.use(express.json());
 
-// Star Wars Characters (DATA)
+// Friends  hard-coded (DATA) Still working on them
 // =============================================================
 var friends = [
   {
     routeName: "ahmeddante",
     name: "Ahmed Dante",
-    photo: "Jedi Master",
+    photo: "Sample",
     score: [
         5,
         1,
@@ -35,7 +35,7 @@ var friends = [
   {
     routeName: "johnmuller",
     name: "John Muller",
-    photo: "Sith Lord",
+    photo: "Sample photo",
     score: [
         5,
         5,
@@ -103,8 +103,9 @@ app.get("/api/friends/:friend", function(req, res) {
 
   return res.json(false);
 });
+// ======STILL WORKING ON THIS PART======
 
-// Create New Characters - takes in JSON input
+// Create New friends 
 app.post("/api/friends", function(req, res) {
   // req.body hosts is equal to the JSON post sent from the user
   // This works because of our body parsing middleware
