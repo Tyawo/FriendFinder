@@ -1,8 +1,11 @@
-var characters = [
+
+// Friends  hard-coded (DATA) Still working on them
+// =============================================================
+
+var friends = [
     {
-      routeName: "ahmeddante",
       name: "Ahmed Dante",
-      photo: "Jedi Master",
+      photo: "https://www.mathsisfun.com/algebra/images/girl01.gif",
       score: [
           5,
           1,
@@ -17,9 +20,8 @@ var characters = [
       ]
     },
     {
-      routeName: "johnmuller",
       name: "John Muller",
-      photo: "Sith Lord",
+      photo: "http://clipart-library.com/data_images/53528.png",
       score: [
           5,
           5,
@@ -34,9 +36,8 @@ var characters = [
       ]
     },
     {
-      routeName: "walterrice",
       name: "Walter Rice",
-      photo: "photo",
+      photo: "https://cdn.pixabay.com/photo/2015/08/09/14/28/frog-881661_960_720.jpg",
       score: [
           5,
           1,
@@ -50,4 +51,5 @@ var characters = [
           5        
       ]
     }
-  ];
+  ]
+  module.exports = friends;
