@@ -246,8 +246,10 @@
             // }
             $("#name").val("");
             $("#photo").val("");
-            $("#q" + i).val("");
-
+            $("#q"+ i).empty("");
+            $("form-group.select").selectmenu("refresh");
+            
+            
             return false;
         });
 
