@@ -212,10 +212,21 @@
     </div>
     <script type="text/javascript">
 
-    
+
         // Grab user input and store them
         $("#submit-btn").on("click", function (event) {
             event.preventDefault();
+
+            var valid = true;
+            if ($("#name").val() === "" || $("#photo").val() === "") {
+                valid = false;
+            }
+            else if ($("#q" + i).val() === "empty") {
+                valid = false;
+            }
+            if (valid == true) {
+
+            
 
             // console.log($("#q10").val())
             var scores = []
@@ -230,27 +241,18 @@
                 score: scores
             };
             console.log(newFriend);
-            // $.ajax 
-            // Question: What does this code do??
-            // $.post("/api/friends", newFriend)
-            //     .then(function (data) {
-            //         console.log("api/friends", data);
-            //         console.log("Adding friend...");
-            //     });
-            // //      validate: function (value) {
-            //     if (isNaN(value) == false){
-            //         return true;
-            //     } else{
-            //         return false;
-            //     }
-            // }
-            $("#name").val("");
-            $("#photo").val("");
-            $("#q"+ i).empty("");
-            $("form-group.select").selectmenu("refresh");
-            
-            
-            return false;
+
+            var currentURl = window.location.origin;
+            $.post(currentURL + "/api/friends", newFriend, function (data) {
+                $("#bestFriend").text(data.name);
+                $("#bestFriendPhoto").attr("src", data.photo);
+                $("#bestFriendModal").modal("toggle");
+            });
+
+            }else {
+                alert("Survey is incomplete.");
+            }
+
         });
 
 
