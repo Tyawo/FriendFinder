@@ -1,11 +1,11 @@
 
-// Friends  hard-coded (DATA) Still working on them
+// Friends  hard-coded (DATA)
 // =============================================================
 
 var friends = [
     {
       name: "Ahmed Dante",
-      photo: "https://www.mathsisfun.com/algebra/images/girl01.gif",
+      photo: "https://ichef.bbci.co.uk/images/ic/960x540/p03kc2m4.jpg",
       score: [
           5,
           1,
@@ -20,8 +20,8 @@ var friends = [
       ]
     },
     {
-      name: "John Muller",
-      photo: "http://clipart-library.com/data_images/53528.png",
+      name: "Thomas Muller",
+      photo: "https://i2-prod.mirror.co.uk/incoming/article6379775.ece/ALTERNATES/s1200/Thomas-Muller-2015.jpg",
       score: [
           5,
           5,
@@ -36,8 +36,8 @@ var friends = [
       ]
     },
     {
-      name: "Walter Rice",
-      photo: "https://cdn.pixabay.com/photo/2015/08/09/14/28/frog-881661_960_720.jpg",
+      name: "Matt Damon",
+      photo: "https://m.media-amazon.com/images/M/MV5BMTM0NzYzNDgxMl5BMl5BanBnXkFtZTcwMDg2MTMyMw@@._V1_UY317_CR11,0,214,317_AL_.jpg",
       score: [
           5,
           1,
