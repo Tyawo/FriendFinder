@@ -1,9 +1,9 @@
-var friendData = require("../data/friends.js");
+var friendData = require("../data/friends");
 
-module.exports = (app) => {
+module.exports = function(app) {
 
   // Displays all friends in JSON format
-  app.get("/api/friends", function (req, res) {
+  app.get("/api/friends", function (req, res) { 
     res.json(friendData);
   });
   // API POST Requests
@@ -39,16 +39,3 @@ module.exports = (app) => {
     });
   });
 };
-// Routes
-// =============================================================
-
-// // Basic route that sends the user first to the AJAX Page
-// app.get("/", function(req, res) {
-//     res.sendFile(path.join(__dirname, "app/public/home.html"));
-//   });
-
-
-
-//   app.get("/all", function(req, res) {
-//     res.sendFile(path.join(__dirname, "all.html"));
-//   });

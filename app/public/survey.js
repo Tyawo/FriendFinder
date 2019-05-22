@@ -1,3 +1,4 @@
+console.log("js file loaded")
 var config = {
     ".choice-select": {},
     ".choice-select-deselect": {
@@ -7,7 +8,7 @@ var config = {
         disable_search_thresold: 10
     },
     ".choice-select-no-results": {
-        no_results_text:"Ops, nothing found!"
+        no_results_text: "Ops, nothing found!"
     },
     ".choice-select-width": {
         width: "95%"
@@ -17,14 +18,14 @@ var config = {
 // Grab user input and store them
 $("#submit").on("click", function (event) {
     event.preventDefault();
-   
+
     var userData = {
         name: $("#name").val(),
         photo: $("#photo").val(),
         scores: [
             $("#q1").val(),
             $("#q2").val(),
-            $("#q3").val(),            
+            $("#q3").val(),
             $("#q4").val(),
             $("#q5").val(),
             $("#q6").val(),
@@ -38,7 +39,7 @@ $("#submit").on("click", function (event) {
 
     // return .map(math.abs(a[i] - b[i]));
     // post the data to the friends API;
-    $post("/api/friends", userData, (data) =>{
+    $.post("/api/friends", userData, function (data) {
         // grab the results from the AJAX post so name and photo of the match are displayed
         $("#match-name").text(data.name);
         $("#match-img").attr("src", data.photo);
@@ -48,5 +49,4 @@ $("#submit").on("click", function (event) {
 
     });
 
-    });
-    
+});
